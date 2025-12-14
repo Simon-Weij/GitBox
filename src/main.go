@@ -15,10 +15,10 @@ func main() {
 		})
 	})
 
-	r.Static("/_app", "./frontend/build/_app")
+	r.Static("/_app", "./dist/_app")
 
 	r.NoRoute(func(c *gin.Context) {
-		c.File("./frontend/build/index.html")
+		c.File("./dist/index.html")
 	})
 
 	r.Run()
